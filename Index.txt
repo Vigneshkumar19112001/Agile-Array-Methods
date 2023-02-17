@@ -1,9 +1,9 @@
 Vignesh:
-
+Array.prototype.reduce()
 
 Sanjay:
-
+Array.prototype.slice()
 
 Vengatesh:
-
+Array.prototype.some()
 
