@@ -1,5 +1,5 @@
 Vignesh:
-Array.prototype.reduceRight()
+Array.prototype.slice()
 
 Sanjay:
 Array.prototype.slice()
