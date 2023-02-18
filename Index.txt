@@ -5,6 +5,97 @@ Array.prototype.reduce()
 2.Sanjay:
 Array.prototype.slice()
 
+    			The slice returns selected element of an array into a new array object. Slice selected form start to end (sometimes end value not included) 
+    Starting and ending represent the index of items in that array. The original array will not changed. It is zerp based index at start and end
+    extraction.
+
+Example:
+========
+
+    const forest = ['lion', 'tiger', 'camel', 'elephant', 'giraffe'];
+
+    console.log(forest.slice(2));
+    // Output : Array ['camel', 'elephant', 'giraffe']
+
+    console.log(forest.slice(1,4));    
+    // Output : Array ['tiger', 'camel', 'elephant']
+
+    console.log(forest.slice(-2));    
+    // Output : Array ['elephant', 'giraffe']
+
+    console.log(forest.slice(1,-1));    
+    // Output : Array ['tiger', 'camel', 'elephant']
+
+    console.log(forest.slice());    
+    // Output : Array ['lion', 'tiger', 'camel', 'elephant', 'giraffe']
+
+
+Syntax:
+=======
+
+    slice()
+    slice(start)
+    slice(start,end)
+
+
+Parameters:      
+==========
+
+    start:
+    ======
+
+       1) Negative index count back from the end of the array 
+            ie)   start < 0, start + array.length
+
+       2) If start < -array.length or start is omitted, 0 is used. 0 is Starting value.
+
+       3) If start >= array.length, nothing is extracted (it is the max value)
+
+    end
+    ===
+     
+        1) Negative index count back from the end of the array
+                ie) end < 0 , end + array.length
+
+        2) If end < -array.length 0 is used (-1,-2,-3,etc,...).
+
+        3) If end >= array.length or end is omitted, array.length is used , causing all elements until the end to be extracted.
+        
+        4) If end is positioned before or at start nothing is extracted.
+
+	return value
+	============
+	    A new array containing the extracted elements.
+
+	
+	Another Example for slice()
+	==========================
+
+	const collegeDetails ={
+	    Name : 'UCEN',
+	    university : 'Anna university',
+	    located : 'Nagercoil',
+	};
+
+	const myDetails = [
+	    {name : 'sanjay'},
+	    collegeDetails, 
+	    {age : 22, school:'CSI'}, 
+	    'CSE' 
+	];
+	const myFriend = myDetails.slice(1,3);
+
+	console.log('myDetails = ', myDetails);
+	console.log('myFriend = ', myFriend);
+
+	Explanation
+	===========
+
+	In above code we give give collegeDetails in object which contain some properties. In myDetails array I give some elements, In myFriend newarray
+		created from the myDetails array by using slice method.
+
+		
+
 3.Vengatesh:
 Array.prototype.some()
 
