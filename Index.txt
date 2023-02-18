@@ -1,10 +1,22 @@
-Vignesh:
+1.Vignesh:
 Array.prototype.slice()
 Array.prototype.reduce()
 
-Sanjay:
+2.Sanjay:
 Array.prototype.slice()
 
-Vengatesh:
+3.Vengatesh:
 Array.prototype.some()
 
+	The return type of Array.prototype.some() is 'true' or 'false'. It checks whether atleast one element in array satisfies the function implementation, If any one of the element is array satisfies the condition it returns 'true' and stops the execution, if non of the element satisfies the function implementation it returns 'false'.
+
+Ex:
+	const array = [1, 2, 3];
+
+	// Checks whether an element is even
+	const even = (element) => element % 2 === 0;
+
+	console.log(array.some(even));
+	// Expected output: true	
+
+Here 2 is even so it returns 'true'.
