@@ -135,6 +135,35 @@ Parameters:
 			console.log(plainObj);
 
 
+3)Array.prototype.reverse()
+
+			The reverse() method reverse an array element and returns the reference to the same array, the first array element becoming the first. In Other
+			words, elements order in the array will be turned towards the direction opposite to that previously stated.
+
+			Syntax:
+			=======
+			reverse()
+
+			Example:
+			========
+					const items = [1, 2, 3];
+					console.log(items); // [1, 2, 3]
+
+					items.reverse();
+					console.log(items); // [3, 2, 1]
+
+
+			Calling reverse() on non-array objects:
+			======================================
+					const arrayLike = {
+  					length: 3,
+  					unrelated: "foo",
+  					2: 4,
+					};
+					console.log(Array.prototype.reverse.call(arrayLike));
+					// { '0': 4, length: 3, unrelated: 'foo' }
+					// The '2' index is deleted because the '0' index was not present originally
+
 
 
 3.Vengatesh:
