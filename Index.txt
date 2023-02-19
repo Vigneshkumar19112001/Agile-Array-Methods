@@ -3,7 +3,7 @@ Array.prototype.slice()
 Array.prototype.reduce()
 
 2.Sanjay:
-Array.prototype.slice()
+1)Array.prototype.slice()
 
     			The slice returns selected element of an array into a new array object. Slice selected form start to end (sometimes end value not included) 
     Starting and ending represent the index of items in that array. The original array will not changed. It is zerp based index at start and end
@@ -96,7 +96,7 @@ Parameters:
 
 		
 
-Array.prototype.shift()
+2)Array.prototype.shift()
 
 		The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 
@@ -109,6 +109,32 @@ Array.prototype.shift()
 				// Output : Array['second,'third']
 				consle.log(firstElement);
 				// Output : 'first'
+
+
+		Calling shift() on non-array object
+			The shift() method reads the length of this. If the normalized length is 0, length is set to 0 again. Otherwise,the property at 0 is returned, 
+			and the rest of the properties are shifted left by one. The length property is decremented by one.
+
+		Example:
+		========
+
+			const arrayLike = {
+  			length: 3,
+  			unrelated: "foo",
+  			2: 4,
+			};
+			console.log(Array.prototype.shift.call(arrayLike));
+			// undefined, because it is an empty slot
+			console.log(arrayLike);
+			// { '1': 4, length: 2, unrelated: 'foo' }
+
+			const plainObj = {};
+			// There's no length property, so the length is 0
+			Array.prototype.shift.call(plainObj);
+			console.log(plainObj);
+
+
+
 
 3.Vengatesh:
 Array.prototype.some()
