@@ -99,7 +99,8 @@ Parameters:
 3.Vengatesh:
 Array.prototype.some()
 
-	The return type of Array.prototype.some() is 'true' or 'false'. It checks whether atleast one element in array satisfies the function implementation, If any one of the element is array satisfies the condition it returns 'true' and stops the execution, if non of the element satisfies the function implementation it returns 'false'.
+			The return type of Array.prototype.some() is 'true' or 'false'. It checks whether atleast one element in array satisfies the function implementation,
+	If any one of the element is array satisfies the condition it returns 'true' and stops the execution, if non of the element satisfies the function implementation it returns 'false'.
 
 Ex:
 	const array = [1, 2, 3];
@@ -111,3 +112,46 @@ Ex:
 	// Expected output: true	
 
 Here 2 is even so it returns 'true'.
+
+
+4.Vignesh:
+
+
+
+
+
+
+
+
+
+5.Sanjay:
+
+
+
+
+
+
+
+
+
+6.Vengatesh R
+Array.prototype.slice()
+
+			The slice() method return the shallow copy of the array to new array, it doesnot modifies the original array it takes two parameters the start index and the end index, 
+	the end index is exclusive. If no parameter is given it copies the whole array and return to new array. The negative index represents the array from reverse 
+	ie. The -1 index represents the last array.
+
+Ex:
+	const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+	console.log(animals.slice(2));
+	// Expected output: Array ["camel", "duck", "elephant"]
+
+	console.log(animals.slice(2, 4));
+	// Expected output: Array ["camel", "duck"]
+
+	console.log(animals.slice(-2));
+	// Expected output: Array ["duck", "elephant"]
+
+	console.log(animals.slice());
+	// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
