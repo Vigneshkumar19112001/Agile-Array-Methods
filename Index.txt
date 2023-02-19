@@ -96,6 +96,20 @@ Parameters:
 
 		
 
+Array.prototype.shift()
+
+		The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+
+		Example
+		=======
+
+				const container = ['first', 'second', 'third'];
+				const firstElement = container.shift();
+				console.log(container);
+				// Output : Array['second,'third']
+				consle.log(firstElement);
+				// Output : 'first'
+
 3.Vengatesh:
 Array.prototype.some()
 
