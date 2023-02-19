@@ -1,6 +1,26 @@
 1.Vignesh:
-Array.prototype.slice()
-Array.prototype.reduce()
+Array.prototype.slice():
+	=> The slice method returns a shallow of a portion of an array into a new array selected from start to end(end not included) Where start and end represents an index
+	   of items in that array.
+	=> The original array will not be modified.
+
+Array.prototype.reduce():
+	=>The reduce method executes a user-supplied "reducer" callback function on each element of the array,inorder, passing in the return value from the calculation
+	  on the preceding element. the final result will be a single value.
+
+Array.prototype.reduceRight():
+	=>The same reduce function will execute from the right side
+
+Array.prototype.reverse():
+	=> the reverse() method reverses an array in place and reverse the reference to the array to the same array.
+	=> the reverse() method overwrites the original array.
+
+Array.prototype.shift():
+	=> the shift method removes the first element from an array and returns that removed element. this method changes the length of the array.
+
+Array.prototype.some():
+	=> The some() method tests wheather at least one element in the array passes function.It returns true if, in the the array, it finds an element
+	   for which the provoded function it returns false. it doesn't modify the array.
 
 2.Sanjay:
 Array.prototype.slice()
