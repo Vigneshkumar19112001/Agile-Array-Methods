@@ -115,6 +115,7 @@ Parameters:
 			The shift() method reads the length of this. If the normalized length is 0, length is set to 0 again. Otherwise,the property at 0 is returned, 
 			and the rest of the properties are shifted left by one. The length property is decremented by one.
 
+
 		Example:
 		========
 
