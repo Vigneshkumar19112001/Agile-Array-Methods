@@ -22,6 +22,8 @@ Array.prototype.some():
 	=> The some() method tests wheather at least one element in the array passes function.It returns true if, in the the array, it finds an element
 	   for which the provoded function it returns false. it doesn't modify the array.
 
+
+
 2.Sanjay:
 1)Array.prototype.slice()
 
@@ -37,15 +39,6 @@ Example:
     console.log(forest.slice(2));
     // Output : Array ['camel', 'elephant', 'giraffe']
 
-    console.log(forest.slice(1,4));    
-    // Output : Array ['tiger', 'camel', 'elephant']
-
-    console.log(forest.slice(-2));    
-    // Output : Array ['elephant', 'giraffe']
-
-    console.log(forest.slice(1,-1));    
-    // Output : Array ['tiger', 'camel', 'elephant']
-
     console.log(forest.slice());    
     // Output : Array ['lion', 'tiger', 'camel', 'elephant', 'giraffe']
 
@@ -56,64 +49,6 @@ Syntax:
     slice()
     slice(start)
     slice(start,end)
-
-
-Parameters:      
-==========
-
-    start:
-    ======
-
-       1) Negative index count back from the end of the array 
-            ie)   start < 0, start + array.length
-
-       2) If start < -array.length or start is omitted, 0 is used. 0 is Starting value.
-
-       3) If start >= array.length, nothing is extracted (it is the max value)
-
-    end
-    ===
-     
-        1) Negative index count back from the end of the array
-                ie) end < 0 , end + array.length
-
-        2) If end < -array.length 0 is used (-1,-2,-3,etc,...).
-
-        3) If end >= array.length or end is omitted, array.length is used , causing all elements until the end to be extracted.
-        
-        4) If end is positioned before or at start nothing is extracted.
-
-	return value
-	============
-	    A new array containing the extracted elements.
-
-	
-	Another Example for slice()
-	==========================
-
-	const collegeDetails ={
-	    Name : 'UCEN',
-	    university : 'Anna university',
-	    located : 'Nagercoil',
-	};
-
-	const myDetails = [
-	    {name : 'sanjay'},
-	    collegeDetails, 
-	    {age : 22, school:'CSI'}, 
-	    'CSE' 
-	];
-	const myFriend = myDetails.slice(1,3);
-
-	console.log('myDetails = ', myDetails);
-	console.log('myFriend = ', myFriend);
-
-	Explanation
-	===========
-
-	In above code we give give collegeDetails in object which contain some properties. In myDetails array I give some elements, In myFriend newarray
-		created from the myDetails array by using slice method.
-
 		
 
 2)Array.prototype.shift()
@@ -136,8 +71,8 @@ Parameters:
 			and the rest of the properties are shifted left by one. The length property is decremented by one.
 
 
-		Example:
-		========
+		Calling shift() on non-array objects:
+		=====================================
 
 			const arrayLike = {
   			length: 3,
@@ -148,11 +83,6 @@ Parameters:
 			// undefined, because it is an empty slot
 			console.log(arrayLike);
 			// { '1': 4, length: 2, unrelated: 'foo' }
-
-			const plainObj = {};
-			// There's no length property, so the length is 0
-			Array.prototype.shift.call(plainObj);
-			console.log(plainObj);
 
 
 3)Array.prototype.reverse()
@@ -184,6 +114,59 @@ Parameters:
 					// { '0': 4, length: 3, unrelated: 'foo' }
 					// The '2' index is deleted because the '0' index was not present originally
 
+
+4)Array.prototype.reduce()
+
+			The reduce() method execute a user supplied reduce callback function on each element of the array,  in order, passing in the return value from 
+			the calculation on the preceding element.
+
+			The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its 
+			place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element
+
+
+			Example:
+			=======
+
+				const value = [15, 16, 17, 18, 19]
+				console.log(value.reduce(
+				(accumulator, currentValue) => accumulator + currentValue,10,)
+				// Output : 95
+				);
+
+
+
+5)Array.prototype.reduceRight()
+
+			The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+
+			Example
+			=======
+
+			const array1 = [[0, 1], [2, 3], [4, 5]];
+
+			const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
+
+			console.log(result);
+			// Expected output: Array [4, 5, 2, 3, 0, 1]
+
+
+
+6)Array.prototype.some()
+
+
+			The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the 
+			array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+
+			Example:
+			========
+
+				const array = [1, 2, 3, 4, 5];
+
+				// Checks whether an element is even
+				const even = (element) => element % 2 === 0;
+
+				console.log(array.some(even));
+				// Expected output: true
 
 
 3.Vengatesh:
