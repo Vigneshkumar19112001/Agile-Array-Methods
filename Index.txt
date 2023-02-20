@@ -187,7 +187,7 @@ Parameters:
 
 
 3.Vengatesh:
-Array.prototype.some()
+1) Array.prototype.some()
 
 			The return type of Array.prototype.some() is 'true' or 'false'. It checks whether atleast one element in array satisfies the function implementation,
 	If any one of the element is array satisfies the condition it returns 'true' and stops the execution, if non of the element satisfies the function implementation it returns 'false'.
@@ -204,31 +204,10 @@ Ex:
 Here 2 is even so it returns 'true'.
 
 
-4.Vignesh:
+2) Array.prototype.slice()
 
-
-
-
-
-
-
-
-
-5.Sanjay:
-
-
-
-
-
-
-
-
-
-6.Vengatesh R
-Array.prototype.slice()
-
-			The slice() method return the shallow copy of the array to new array, it doesnot modifies the original array it takes two parameters the start index and the end index, 
-	the end index is exclusive. If no parameter is given it copies the whole array and return to new array. The negative index represents the array from reverse 
+			The slice() method return the shallow copy of the array to new array, it doesnot modifies the original array it takes two parameters the start index and the end index, the end index is exclusive. 
+	If no parameter is given it copies the whole array and return to new array. The negative index represents the array from reverse 
 	ie. The -1 index represents the last array.
 
 Ex:
@@ -245,3 +224,69 @@ Ex:
 
 	console.log(animals.slice());
 	// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+3) Array.prototype.shift()
+
+		shift() is the array method. It is similar to pop() but the difference is pop() removes the last element from the array the shift is used to remove the first element from the array.
+
+Ex:
+	const array1 = [1, 2, 3];
+
+	const firstElement = array1.shift();
+
+	console.log(array1);
+	// Expected output: Array [2, 3]
+
+	console.log(firstElement);
+	// Expected output: 1
+
+4) Array.prototype.reverse()
+
+		The reverse() method is used to reverse the array, which means the fist element of array becomes the last element and the last becomes the first element. The reverse() method is destructive, 
+	it modifies the original array it doesnot creates new array.
+
+Ex:
+	const array1 = ['one', 'two', 'three'];
+	console.log('array1:', array1);
+	// Expected output: "array1:" Array ["one", "two", "three"]
+
+	const reversed = array1.reverse();
+	console.log('reversed:', reversed);
+	// Expected output: "reversed:" Array ["three", "two", "one"]
+
+	console.log('array1:', array1);
+	// Expected output: "array1:" Array ["three", "two", "one"]
+
+5) Array.prototype.reduce()
+
+	Array.prototype.reduce() is a built-in method in JavaScript that is used to reduce the elements of an array to a single value. It takes a callback function as the first argument and an optional initial value as the second argument.
+	The callback function takes two required arguments: the accumulator and the current value. It can also take two optional arguments: the current index and the original array.
+
+Ex:
+	const array1 = [1, 2, 3, 4];
+
+	// 0 + 1 + 2 + 3 + 4
+	const initialValue = 0;
+	const sumWithInitial = array1.reduce(
+  		(accumulator, currentValue) => accumulator + currentValue,
+  		initialValue
+	);
+
+	console.log(sumWithInitial);
+	// Expected output: 10
+
+Here reduce is used to get the sum of all elements in array. The accumulator is the variable that holds the sum of the elements, and currentValue is the current element being processed. The initial value of the accumulator is set to 0.
+
+
+6) Array.prototype.reduceRight()
+
+	The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value. The main difference between reduce and reduceRight is In reduce the flow of execution is from left to right, 
+	In reduceRight the flow is from right to left. As like reduce, reduceRight takes two arguments, a callback function that is called for each element of the array, an optional initial value for the accumulator.
+
+Ex: 
+	const array1 = [[0, 1], [2, 3], [4, 5]];
+
+	const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
+	
+	console.log(result);
+	// Expected output: Array [4, 5, 2, 3, 0, 1]
